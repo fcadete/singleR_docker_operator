@@ -1,9 +1,9 @@
 {
-  "name": "OPERATOR NAME",
-  "description": "DESCRIPTION",
-  "tags": ["template"],
+  "name": "singleR",
+  "description": "Assigns cell types to single-cell RNA-seq data",
+  "tags": ["genomics", "transcriptomics", "cell type", "single-cell", "RNA-seq"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/OPERATOR_NAME"],
+  "urls": ["https://github.com/fcadete/singleR_docker_operator"],
   "container": "tercen/CONTAINER_NAME:TAG",
   "isWebApp": false
 }
