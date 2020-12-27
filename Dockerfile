@@ -3,14 +3,15 @@ FROM tercen/dartrusttidy:1.0.7
 USER root
 WORKDIR /operator
 
-RUN git clone https://github.com/tercen/OPERATOR_NAME.git
+RUN git clone https://github.com/tercen/singleR_operator.git
 
-WORKDIR /operator/OPERATOR_NAME
+WORKDIR /operator/singleR_operator
 
-RUN echo X.X.X && git pull
-RUN git checkout X.X.X
+RUN apt install default-jdk
 
-RUN R -e "renv::restore(confirm=FALSE)"
+RUN wget https://cran.r-project.org/src/base/R-3/R-3.6.3.tar.gz
+RUN tar -xzf R-3.6.3.tar.gz
+RUN cd R-3.6.3 && ./configure --with-x=no --with-pcre1 && make && make install
 
 ENV TERCEN_SERVICE_URI https://tercen.com
 
